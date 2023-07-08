@@ -49,6 +49,8 @@ end
 gem "draper"
 gem "haml-rails"
 gem "html2haml"
+gem "i18n-tasks"
+gem "rails-i18n", "~> 7.0.0"
 gem "rubocop"
 gem "rubocop-performance"
 gem "rubocop-rails_config"

@@ -46,6 +46,7 @@ group :development, :test do
   gem "rubocop-rspec", require: false
 end
 
+gem "devise"
 gem "draper"
 gem "haml-rails"
 gem "html2haml"

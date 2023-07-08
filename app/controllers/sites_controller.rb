@@ -1,5 +1,5 @@
-class SitesController < ApplicationController
+# frozen_string_literal: true
 
-  def home
-  end
+class SitesController < ApplicationController
+  def home; end
 end

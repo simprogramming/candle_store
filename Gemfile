@@ -40,13 +40,14 @@ group :test do
   gem "simplecov-console", require: false
 end
 
-
 group :development, :test do
   gem "factory_bot_rails"
   gem "rspec-rails"
   gem "rubocop-rspec", require: false
 end
 
+gem "haml-rails"
+gem "html2haml"
 gem "rubocop"
 gem "rubocop-performance"
 gem "rubocop-rails_config"

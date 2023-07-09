@@ -47,11 +47,13 @@ group :development, :test do
 end
 
 gem "devise"
+gem 'devise-i18n'
 gem "draper"
 gem "haml-rails"
 gem "html2haml"
 gem "i18n-tasks"
 gem "rails-i18n", "~> 7.0.0"
+gem "pundit"
 gem "rubocop"
 gem "rubocop-performance"
 gem "rubocop-rails_config"

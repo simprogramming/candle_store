@@ -7,8 +7,6 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_action :authenticate_user!
-
   def configure_permitted_parameters
     # Add extra permitted columns to devise for registration
     base_attrs = %i[first_name last_name email]

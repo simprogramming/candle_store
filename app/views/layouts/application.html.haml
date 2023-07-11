@@ -9,6 +9,8 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
   %body
+    - if user_signed_in?
+      = render "layouts/shared/navbar"
     .p-3
       - if flash[:notice].present?
         .alert.alert-success= flash[:notice]

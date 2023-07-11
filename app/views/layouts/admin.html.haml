@@ -11,7 +11,7 @@
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", :rel => "stylesheet"}
   %body
     - if user_signed_in?
-      = render "layouts/shared/navbar"
+      = render "layouts/shared/navbar_admin"
     .container
       .p-3
         - if flash[:notice].present?

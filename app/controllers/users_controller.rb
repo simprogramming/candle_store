@@ -1,10 +1,7 @@
 class UsersController < ApplicationController
+  include AdminSideHelper
   before_action :set_user, only: %i[edit update show]
   before_action -> { authorize @user || User }
-
-  before_action :authenticate_user!
-
-  layout "admin"
 
   decorates_assigned :user, :users
   add_controller_helpers :users, only: :index

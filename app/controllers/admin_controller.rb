@@ -1,8 +1,8 @@
 class AdminController < ApplicationController
+  include AdminSideHelper
+
   before_action -> { authorize :admin }
-
-  before_action :authenticate_user!
-
   def dashboard
+    skip_policy_scope
   end
 end

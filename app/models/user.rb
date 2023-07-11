@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  searchable :email, :first_name, :last_name
+
   enum role: { admin: "admin", user: "user" }
   translate_enum :role
 end

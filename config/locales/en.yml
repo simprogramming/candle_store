@@ -1,3 +1,28 @@
 ---
 en:
   hello: Hello world
+  helpers:
+    filters:
+      active: Enabled
+      all: All
+      inactive: Disabled
+    links:
+      activate: Activate
+      add: Add
+      back: Back
+      cancel: Cancel
+      destroy: Delete
+      discard: Discard
+      edit: Edit
+      export: Export
+      new: New
+      search: Search
+    submit:
+      create: Create
+      submit: Submit
+      update: Update
+    titles:
+      edit: Edit %{model}
+      new: New %{model}
+      newf: New %{model}
+      newm: New %{model}

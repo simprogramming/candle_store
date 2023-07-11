@@ -3,7 +3,7 @@ module AdminBasePolicy
   extend ActiveSupport::Concern
 
   included do |klass|
-    # rubocop:disable Lint/ConstantDefinitionInBlock, Style/ClassAndModuleChildren, Metrics/AbcSize
+    # rubocop:disable Lint/ConstantDefinitionInBlock, Style/ClassAndModuleChildren
     class klass::Scope < klass::Scope
       def resolve
         return scope.all if user&.admin?
@@ -11,7 +11,7 @@ module AdminBasePolicy
         scope.none
       end
     end
-    # rubocop:enable Lint/ConstantDefinitionInBlock, Style/ClassAndModuleChildren, Metrics/AbcSize
+    # rubocop:enable Lint/ConstantDefinitionInBlock, Style/ClassAndModuleChildren
 
     def index?
       user.admin?

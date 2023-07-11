@@ -10,10 +10,9 @@
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", :rel => "stylesheet"}
   %body
+    - if user_signed_in?
+      = render "layouts/shared/navbar"
     .container
-      %ul
-        %li= link_to "users", users_path
-        %li= link_to "dashboard", dashboard_path
       .p-3
         - if flash[:notice].present?
           .alert.alert-success= flash[:notice]

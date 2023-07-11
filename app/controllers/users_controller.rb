@@ -14,24 +14,16 @@ class UsersController < ApplicationController
   def show
   end
 
-  def new
-    @user = User.new
-  end
-
   def edit
   end
 
-  def create
-    @user = User.new(permitted_attributes(User))
-
-    if @user.save
-      redirect_to @user, notice: create_successful_notice
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-
   def update
+    @user.assign_attributes(user_params)
+    if @user.save
+      redirect_to users_path, notice: update_successful_notice
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

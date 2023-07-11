@@ -1,3 +1,28 @@
 ---
 fr:
   hello: Bonjour Monde
+  helpers:
+    filters:
+      active: Activé
+      all: Tous
+      inactive: Désactivé
+    links:
+      activate: Activer
+      add: Ajouter
+      back: Retour
+      cancel: Annuler
+      destroy: Supprimer
+      discard: Désactiver
+      edit: Modifier
+      export: Exporter
+      new: Nouveau
+      search: Rechercher
+    submit:
+      create: Créer
+      submit: Enregistrer
+      update: Modifier
+    titles:
+      edit: Modifier %{model}
+      new: Nouveau %{model}
+      newf: Nouvelle %{model}
+      newm: Nouvel %{model}

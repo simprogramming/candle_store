@@ -9,6 +9,11 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
   %body
-    %p.notice= notice
-    %p.alert= alert
+    .p-3
+      - if flash[:notice].present?
+        .alert.alert-success= flash[:notice]
+      - if flash[:warning].present?
+        .alert.alert-warning= flash[:warning]
+      - if flash[:alert].present?
+        .alert.alert-danger= flash[:alert]
     = yield

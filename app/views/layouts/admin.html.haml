@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title CandleStore
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", :rel => "stylesheet"}
+  %body
+    .container
+      %ul
+        %li= link_to "users", users_path
+        %li= link_to "dashboard", dashboard_path
+      .p-3
+        - if flash[:notice].present?
+          .alert.alert-success= flash[:notice]
+        - if flash[:warning].present?
+          .alert.alert-warning= flash[:warning]
+        - if flash[:alert].present?
+          .alert.alert-danger= flash[:alert]
+
+        - if content_for? :title
+          = content_for :previous_page
+
+        .d-flex.justify-content-between.align-items-center
+          = content_for :title
+          %div= content_for :title_actions
+
+      = yield

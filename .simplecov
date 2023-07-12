@@ -1,5 +1,5 @@
 return if ENV["NOCOV"] == "true"
-return unless Rails.env.test?
+return unless ENV['RAILS_ENV']=='development'
 
 require "simplecov-console"
 

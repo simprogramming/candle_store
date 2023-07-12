@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   searchable :email, :first_name, :last_name
 
-  enum role: { admin: "admin", user: "user" }
+  validates :role, :first_name, :last_name, presence: true
+
+  enum role: { admin: "admin", client: "client" }
   translate_enum :role
 end

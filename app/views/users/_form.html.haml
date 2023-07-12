@@ -7,6 +7,8 @@
     .col-md-6
       = f.input :email, input_html: { autocomplete: "off" }
     .col-md-6
+      = f.input :role, collection: User.translated_roles_sorted, input_html: { autocomplete: "off" }
+    .col-md-6
       = f.input :password, input_html: { autocomplete: "off" }
     .col-md-6
       = f.input :password_confirmation, input_html: { autocomplete: "off" }

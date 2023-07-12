@@ -10,8 +10,7 @@ fr:
         remember_me: Se souvenir de moi
         role_list:
           admin: Administrateur
-          master: Master
-          user: Utilisateur
+          client: Client
     models:
       user:
         one: Utilisateur

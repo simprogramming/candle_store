@@ -10,7 +10,7 @@ en:
         remember_me: Remember me
         role_list:
           admin: Admin
-          user: User
+          client: Client
     models:
       user:
         one: User

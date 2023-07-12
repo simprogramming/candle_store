@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   include AdminSideHelper
-  before_action :set_user, only: %i[edit update show]
+  before_action :set_user, only: %i[edit update show destroy]
   before_action -> { authorize @user || User }
 
   decorates_assigned :user, :users
@@ -23,6 +23,11 @@ class UsersController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to users_path, notice: destroy_successful_notice
   end
 
   private

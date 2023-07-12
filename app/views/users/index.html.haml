@@ -23,5 +23,9 @@
           - if policy(user).edit?
             = link_to edit_user_url(user), class: "btn btn-primary btn-sm mx-1", data: { turbo: false } do
               %i.fa-solid.fa-pen
+          - if policy(user).destroy?
+            = link_to user, class: "btn btn-danger btn-sm mx-1", data: { "turbo-method": :delete, confirm: "Are you sure?" } do
+              %i.fa-solid.fa-trash
+
 
 = add_pagination @users
